@@ -1,0 +1,18 @@
+USE sakila;
+SHOW TABLES;
+SELECT * FROM actor;
+SELECT * FROM film;
+SELECT * FROM customer;
+SELECT title FROM film;
+SELECT name AS language FROM language;
+SELECT first_name FROM staff;
+SELECT DISTINCT release_year FROM film;
+SELECT COUNT(DISTINCT store_id) AS num_store FROM store;
+SELECT COUNT(DISTINCT staff_id) AS num_staff FROM staff;
+SELECT COUNT(DISTINCT inventory_id) AS num_films FROM inventory;
+SELECT COUNT(DISTINCT inventory_id) AS num_films_rented FROM rental;
+SELECT COUNT(DISTINCT last_name) AS num_last_name_actor FROM actor;
+SELECT * FROM film ORDER BY length DESC LIMIT 10;
+SELECT * FROM actor WHERE first_name = 'Scarlett';
+SELECT * FROM film WHERE title LIKE '%Armageddon%' AND length > 100;
+SELECT COUNT(*) AS num_films_behind_the_scenes FROM film WHERE special_features LIKE '%Behind the Scenes%';
